@@ -217,22 +217,22 @@ scoring:
 
 search:
   queries:
-    - "Salesforce Consultant"
-    - "Salesforce Implementation Consultant"
-    - "Salesforce Solutions Consultant"
-    - "Salesforce Functional Consultant"
-    - "CRM Consultant"
-    - "Salesforce Solutions Engineer"
-    - "Salesforce Pre-Sales"
-    - "Salesforce Technical Consultant"
+    - "Incident Response"
+    - "Cyber Analyst"
+    - "vulnerability management"
+    - "Cybersecurity"
+    - "Cyber engineer"
+    - "IT Security"
+    - "IT technician"
+    - "Desktop Support"
 
   locations:
-    - "Canada"
+    - "United States"
 
   sources:
     - linkedin        # working reliably
-    # - indeed        # scraping unreliable, left for future use
-    # - glassdoor     # scraping unreliable, left for future use
+    - indeed        # scraping unreliable, left for future use
+    - glassdoor     # scraping unreliable, left for future use
 
   hours_old: 336       # 2-week lookback
   max_per_query: 20
@@ -240,22 +240,62 @@ search:
   ai_filter: true
 
   target_roles: >
-    Solutions Consultant, Implementation Consultant, Solutions Engineer,
-    or Pre-Sales Consultant roles at Salesforce consulting partners or ISVs.
-    Must involve Salesforce platform work — implementations, discovery,
-    or pre-sales technical demos. Not internal admin roles, not pure
-    sales quota roles, not staffing firms.
+    Security Analyst, SOC Analyst (Tier 2/3), Incident Response Analyst,
+    Threat Response & Remediation Engineer, Vulnerability Management
+    Analyst, Security Operations Analyst, Cyber Security Analyst, or
+    Blue Team / Defensive Security Engineer roles at enterprises, MSSPs,
+    or public-sector / regulated organizations. Must involve defensive
+    security operations — incident response, EDR-based investigation and
+    containment, or operational vulnerability management (CVE triage,
+    CVSS prioritization, remediation) using CrowdStrike, Microsoft
+    Defender, or comparable tooling. Regulated or government environments
+    (FedRAMP, GCC High, NIST, CMMC) are a strong plus. Not offensive
+    roles (pentest, red team, bug bounty, exploit or detection
+    engineering), not developer or secure-code-review roles, not
+    cloud-security-architect roles, not clearance-gated roles the
+    candidate can't fill, not staffing/recruiting firms.
+
 
   title_keywords:
-    - "salesforce"
-    - "sales force"
-    - "solutions consultant"
-    - "implementation consultant"
-    - "solutions engineer"
-    - "pre-sales"
-    - "presales"
-    - "crm consultant"
-    - "functional consultant"
+  # Primary titles — highest signal, search these directly
+  - "SOC Analyst"
+  - "Security Operations Analyst"
+  - "Incident Response Analyst"
+  - "Cyber Security Analyst"
+  - "Information Security Analyst"
+  - "Vulnerability Management Analyst"
+  - "Threat Response Engineer"
+  - "Threat Response and Remediation Engineer"
+  - "Security Analyst Tier 2"
+  - "Security Analyst Tier 3"
+  - "Blue Team Analyst"
+  - "Detection and Response Analyst"
+
+  # Tool / domain modifiers — pair with titles to narrow to your stack
+  - "CrowdStrike analyst"
+  - "Microsoft Defender security"
+  - "SOAR incident response"
+  - "SIEM analyst"
+  - "EDR incident response"
+  - "vulnerability management CVSS"
+  - "phishing incident response"
+
+  # Regulated / public-sector — surfaces your GCC High / FedRAMP edge
+  - "GCC High security"
+  - "FedRAMP security analyst"
+  - "NIST 800-53 analyst"
+  - "CMMC security analyst"
+  - "government cyber security analyst"
+
+  # Negative keywords — exclude to cut false positives from your hard gates
+  - "-penetration tester"
+  - "-red team"
+  - "-bug bounty"
+  - "-detection engineer"
+  - "-software engineer"
+  - "-cloud security architect"
+  - "-sales"
+  - "-staffing"
 
   title_exclude:
     - "account executive"
