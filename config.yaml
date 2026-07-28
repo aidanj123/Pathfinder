@@ -342,10 +342,10 @@ accessibility:
       the role as described. "Lift 50 lbs" in a Salesforce consultant role is
       method-based exclusion. "Physical stamina" in a paramedic role is legitimate.
     examples:
-      - "Must lift 50 lbs" (vs. "move equipment between sites")
-      - "Stand for long periods" (vs. "conduct on-site sessions")
-      - "Valid driver's license required" (vs. "travel to client locations")
-      - "Must be able to hear phone conversations" (vs. "communicate with clients")
+      - "Must lift 50 lbs (vs. move equipment between sites)"
+      - "Stand for long periods (vs. conduct on-site sessions)"
+      - "Valid driver's license required (vs. travel to client locations)"
+      - "Must be able to hear phone conversations (vs. communicate with clients)"
     guardrail:
       - "Flag only when the physical method is not plausibly essential to the role."
       - "A method-based requirement in a role where the outcome could be achieved another way is the exclusion signal."
