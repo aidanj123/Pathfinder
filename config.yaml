@@ -21,33 +21,78 @@ profile:
   # Write these as evidence, not job description. Specific outcomes beat vague claims.
   # Bad:  "Strong Salesforce experience"
   # Good: "Recovered a failed multi-partner implementation, ran $Xm revenue through the rebuilt org"
-  highlights:
-    - "5 years hands-on Salesforce experience (Sales Cloud, Agentforce)"
-    - "Built and ran two production Sales Cloud orgs end-to-end"
-    - "Recovered a failed multi-partner implementation, rebuilt from scratch"
-    - "Ran 1,000+ deals and $Xm revenue through the org built — operator credibility most consultants lack"
-    - "Built a working Agentforce agent from scratch (quote generation via plain language input)"
-    - "Business Analysis coursework, distinction"
-    - "Background is operator/practitioner (built and owned production orgs), not career-changer — this is depth, not a gap"
+# ============================================================
+# PATHFINDER SCORING CONFIG
+# Evaluation order: disqualify (hard gates) -> qualify -> neutral
+# ============================================================
 
-  certifications_held:
-    - "Salesforce Admin"
-    - "Agentforce Specialist"
-    - "Agentblazer Legend"
+highlights:
+  - "Reduced critical and high CVEs from ~400 to ~160 (60% reduction) across a GCC High environment in ~3 months by prioritizing remediation with CVSS scoring from Windows Defender and CrowdStrike, personally managing the effort and doing most of the patching."
+  - "Built Python scripts and a SOAR playbook that auto-resolved ~40% of incoming phishing incidents (~50/day) that carried markers making them impossible to be real threats, eliminating manual analyst triage for those cases; identified the problem and led the fix."
+  - "Managed security across ~2,000 endpoints in a single organization spanning two environments: a GCC High (FedRAMP-regulated) tenant and a Windows Enterprise environment."
+  - "Served as an escalation point on a ~20-person security/IT team."
+  - "Operated under FedRAMP in GCC High, supporting annual audits by ensuring incidents were remediated within compliant timeframes, keeping vulnerability counts within thresholds, and vetting user-requested applications for compliance."
+  - "Contributed to a FedRAMP environment passing its annual audit, owning the incident-timeliness, vulnerability-threshold, and application-compliance pieces."
+  - "Recovered ~30 devices in ~5 hours during the July 2024 CrowdStrike outage by guiding locked-out, non-technical users through BIOS navigation and BitLocker key recovery."
+  - "Draws on prior experience as a rock climbing instructor to explain technical procedures to users of any skill level under pressure."
+  - "Holds CompTIA Security+ (earned 2025) and is currently studying for the CISSP."
+  - "Strongest in incident response and vulnerability management."
+  - "Actively building depth in cloud security and scripting; would not yet claim either as a strength."
+  - "Approximately two years of professional IT/security experience."
 
-  certifications_in_progress:
+# ------------------------------------------------------------
+# HARD GATES — any single match scores the role NO immediately.
+# These exist to stop keyword-collision false positives, where a
+# posting shares vocabulary (e.g. "vulnerability") but the actual
+# work sits in a declared weakness.
+# ------------------------------------------------------------
+disqualify:
+  - "Offensive security is a core function: penetration testing, red teaming, bug bounty triage, exploit development, or adversary emulation as the primary responsibility."
+  - "Custom scripting, software development, or source-code / secure-code review is listed as a minimum (not preferred) requirement."
+  - "Detection engineering — authoring detection rules or content at scale — is the primary function of the role."
+  - "Cloud security engineering or architecture is the sole/primary function (e.g. owning cloud security posture as the main duty), as opposed to cloud being one area among several."
+  - "An active security clearance the candidate does not hold (e.g. TS/SCI) is required at time of hire."
+
+# ------------------------------------------------------------
+# CORE QUALIFY — 3+ of these with no disqualifier = YES.
+# Fewer than 3 = MAYBE.
+# ------------------------------------------------------------
+qualify:
+  - "Incident response, threat containment, or remediation is a core function of the role."
+  - "Operational vulnerability management: CVE triage, CVSS-based prioritization, remediation tracking, and patching (defensive, not research)."
+  - "Hands-on use of CrowdStrike and/or Microsoft Defender / Defender for Endpoint is expected."
+  - "Security operations tooling in scope: SIEM, SOAR, EDR, or phishing/email-security automation."
+  - "GRC, compliance, or audit support against NIST (CSF / 800-53 / 800-171), FedRAMP, CMMC, or DFARS."
+  - "Role is a tier-2/tier-3 or escalation point for security incidents."
+  - "Regulated, public-sector, or government environment (GCC High, federal, state/municipal, defense-adjacent)."
+  - "Preferred or required certs include Security+, CySA+, CISSP, SC-900, or AZ-900."
+
+# ------------------------------------------------------------
+# NEUTRAL — reduce confidence, never override a YES.
+# Years-of-experience stays soft here by design.
+# ------------------------------------------------------------
+neutral:
+  - "Requires 4+ years, senior/lead/staff/principal level, an architect title, an infrastructure-engineering classification, or formal mentoring/leadership of a team."
+  - "Emphasizes macOS internals or deep Linux administration (candidate is Windows-heavy)."
+  - "Customer-facing MSP/consulting delivery model or a 24x7 on-call rotation (candidate's background is internal, single-org)."
+  - "Requires a specific degree the candidate may not hold."
+
+certifications_held:
+    - "CompTIA Security+"
+
+certifications_in_progress:
     - "Sales Cloud Consultant"
 
-  languages:
+languages:
     - "English"
 
   # Where you're willing to work
-  location_prefs:
-    base: "Your City, Province/State"
+location_prefs:
+    base: "New York, NY"
     hybrid_ok:
-      - "Your City"
-      - "Nearby City 1"
-      - "Nearby City 2"
+      - "New York"
+      - "Jersey City"
+      - "Newark"
     open_to_remote: true
 
 
